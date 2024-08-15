@@ -13,10 +13,10 @@ const ProductCard = ({ product }) => {
         <h2><span className="font-bold">{product.price}</span> BDT</h2>
         <div className="flex justify-center">
           <div className="flex gap-1">
-            <button className="text-[10px] md:text-xl bg-orange-600 text-white px-1 md:px-2 rounded-sm">
+            <button className="text-[10px] md:text-[14px] bg-orange-600 text-white px-1 md:px-2 rounded-sm">
               <small>Buy Now</small>
             </button>
-            <button className="text-[10px] md:text-xl px-1 md:px-2 border border-orange-500  rounded-sm">
+            <button className="text-[10px] md:text-[14px] px-1 md:px-2 border border-orange-500  rounded-sm">
               <small>Add to Cart</small>
             </button>
           </div>
