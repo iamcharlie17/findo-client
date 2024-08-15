@@ -1,0 +1,362 @@
+[
+    {
+      "productName": "Laptop",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+      "description": "Powerful laptop for work and gaming",
+      "price": 1299,
+      "category": "Electronics",
+      "ratings": 4.5,
+      "createdAt": "2023-11-22T10:35:24Z"
+    },
+    {
+      "productName": "Smartphone",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+      "description": "Latest flagship smartphone with amazing camera",
+      "price": 999,
+      "category": "Electronics",
+      "ratings": 4.8,
+      "createdAt": "2024-02-15T14:22:11Z"
+    },
+    {
+      "productName": "Headphones",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+      "description": "Noise-canceling headphones for immersive listening",
+      "price": 199,
+      "category": "Electronics",
+      "ratings": 4.7,
+      "createdAt": "2024-03-10T08:15:42Z"
+    },
+    {
+      "productName": "Smartwatch",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+      "description": "Stylish smartwatch with fitness tracking features",
+      "price": 249,
+      "category": "Electronics",
+      "ratings": 4.3,
+      "createdAt": "2024-04-21T12:47:18Z"
+    },
+    {
+      "productName": "Tablet",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+      "description": "Portable tablet for entertainment and productivity",
+      "price": 399,
+      "category": "Electronics",
+      "ratings": 4.1,
+      "createdAt": "2024-05-17T16:02:34Z"
+    },
+    {
+      "productName": "Running Shoes",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+      "description": "Comfortable running shoes for daily workouts",
+      "price": 79,
+      "category": "Sports",
+      "ratings": 4.2,
+      "createdAt": "2023-09-08T18:45:33Z"
+    },
+    {
+      "productName": "Yoga Mat",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+      "description": "Supportive yoga mat for your practice",
+      "price": 39,
+      "category": "Sports",
+      "ratings": 4.6,
+      "createdAt": "2023-10-20T10:18:57Z"
+    },
+    {
+      "productName": "Coffee Maker",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+      "description": "Enjoy delicious coffee at home",
+      "price": 129,
+      "category": "Kitchen",
+      "ratings": 4.7,
+      "createdAt": "2024-01-12T11:02:56Z"
+    },
+    {
+      "productName": "Blender",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+      "description": "Powerful blender for smoothies and more",
+      "price": 99,
+      "category": "Kitchen",
+      "ratings": 4.4,
+      "createdAt": "2024-06-03T09:35:12Z"
+    },
+    {
+      "productName": "Toaster",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+      "description": "Fast and easy toasting for breakfast",
+      "price": 49,
+      "category": "Kitchen",
+      "ratings": 4.1,
+      "createdAt": "2024-07-15T14:07:45Z"
+    },
+    {
+        "productName": "Television",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Smart TV with stunning picture quality",
+        "price": 799,
+        "category": "Electronics",
+        "ratings": 4.6,
+        "createdAt": "2024-08-12T15:23:09Z"
+      },
+      {
+        "productName": "Refrigerator",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Spacious refrigerator with energy-efficient cooling",
+        "price": 899,
+        "category": "Appliances",
+        "ratings": 4.3,
+        "createdAt": "2024-07-25T11:45:32Z"
+      },
+      {
+        "productName": "Washing Machine",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "High-efficiency washing machine with multiple wash cycles",
+        "price": 699,
+        "category": "Appliances",
+        "ratings": 4.5,
+        "createdAt": "2024-06-18T13:07:41Z"
+      },
+      {
+        "productName": "Microwave Oven",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Compact microwave oven for quick reheating",
+        "price": 99,
+        "category": "Appliances",
+        "ratings": 4.2,
+        "createdAt": "2024-05-31T10:22:54Z"
+      },
+      {
+        "productName": "Vacuum Cleaner",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Powerful cordless vacuum cleaner for deep cleaning",
+        "price": 299,
+        "category": "Home Appliances",
+        "ratings": 4.8,
+        "createdAt": "2024-04-13T17:41:27Z"
+      },
+      {
+        "productName": "Air Conditioner",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Efficient air conditioner for cooling your home",
+        "price": 499,
+        "category": "Home Appliances",
+        "ratings": 4.4,
+        "createdAt": "2024-03-26T15:59:10Z"
+      },
+      {
+        "productName": "Electric Kettle",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Fast and convenient electric kettle for boiling water",
+        "price": 29,
+        "category": "Kitchen Appliances",
+        "ratings": 4.3,
+        "createdAt": "2024-02-08T12:13:35Z"
+      },
+      {
+        "productName": "Rice Cooker",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Automatic rice cooker for perfect rice every time",
+        "price": 59,
+        "category": "Kitchen Appliances",
+        "ratings": 4.6,
+        "createdAt": "2024-01-21T09:27:58Z"
+      },
+      {
+        "productName": "Sofa",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Comfortable sofa for relaxing and entertaining",
+        "price": 599,
+        "category": "Furniture",
+        "ratings": 4.5,
+        "createdAt": "2023-12-04T16:42:12Z"
+      },
+      {
+        "productName": "Bed",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Supportive bed for a good night's sleep",
+        "price": 399,
+        "category": "Furniture",
+        "ratings": 4.7,
+        "createdAt": "2023-11-17T13:56:26Z"
+      },
+      {
+        "productName": "Desk",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Sturdy desk for home office or study",
+        "price": 199,
+        "category": "Furniture",
+        "ratings": 4.4,
+        "createdAt": "2023-10-31T11:24:50Z"
+      },
+      {
+        "productName": "Chair",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Ergonomic office chair for comfort and support",
+        "price": 149,
+        "category": "Furniture",
+        "ratings": 4.2,
+        "createdAt": "2023-09-15T14:37:23Z"
+      },
+      {
+        "productName": "Bookshelf",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Stylish bookshelf for organizing your books",
+        "price": 129,
+        "category": "Furniture",
+        "ratings": 4.5,
+        "createdAt": "2023-08-28T17:51:36Z"
+      },
+      {
+        "productName": "Camera",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "High-resolution camera for capturing stunning photos",
+        "price": 499,
+        "category": "Electronics",
+        "ratings": 4.7,
+        "createdAt": "2024-09-05T13:25:14Z"
+      },
+      {
+        "productName": "Drone",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Fun and exciting drone for aerial photography",
+        "price": 399,
+        "category": "Electronics",
+        "ratings": 4.3,
+        "createdAt": "2024-10-18T11:48:27Z"
+      },
+      {
+        "productName": "Gaming Console",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Powerful gaming console for immersive gaming experiences",
+        "price": 499,
+        "category": "Electronics",
+        "ratings": 4.8,
+        "createdAt": "2024-11-01T15:12:40Z"
+      },
+      {
+        "productName": "Video Game",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Exciting video game with engaging gameplay",
+        "price": 59,
+        "category": "Entertainment",
+        "ratings": 4.6,
+        "createdAt": "2024-11-15T12:36:03Z"
+      },
+      {
+        "productName": "Movie Tickets",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Enjoy a night out at the movies",
+        "price": 20,
+        "category": "Entertainment",
+        "ratings": 4.2,
+        "createdAt": "2024-11-29T09:50:16Z"
+      },
+      {
+        "productName": "Concert Tickets",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Experience live music with your favorite artists",
+        "price": 80,
+        "category": "Entertainment",
+        "ratings": 4.5,
+        "createdAt": "2024-12-13T16:04:29Z"
+      },
+      {
+        "productName": "Books",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "A variety of books for all interests",
+        "price": 15,
+        "category": "Books",
+        "ratings": 4.3,
+        "createdAt": "2024-12-27T13:18:42Z"
+      },
+      {
+        "productName": "Bicycle",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Eco-friendly transportation and exercise",
+        "price": 299,
+        "category": "Sports",
+        "ratings": 4.5,
+        "createdAt": "2025-01-15T11:24:50Z"
+      },
+      {
+        "productName": "Skateboard",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Fun and stylish way to get around",
+        "price": 99,
+        "category": "Sports",
+        "ratings": 4.2,
+        "createdAt": "2025-02-18T14:37:23Z"
+      },
+      {
+        "productName": "Gym Membership",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Access to state-of-the-art fitness equipment",
+        "price": 49,
+        "category": "Fitness",
+        "ratings": 4.5,
+        "createdAt": "2025-03-22T17:51:36Z"
+      },
+      {
+        "productName": "Protein Powder",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Supplement for muscle growth and recovery",
+        "price": 39,
+        "category": "Health & Beauty",
+        "ratings": 4.7,
+        "createdAt": "2025-04-25T13:25:14Z"
+      },
+      {
+        "productName": "Sunscreen",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Protect your skin from harmful UV rays",
+        "price": 19,
+        "category": "Health & Beauty",
+        "ratings": 4.3,
+        "createdAt": "2025-05-28T11:48:27Z"
+      },
+      {
+        "productName": "Makeup",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Enhance your natural beauty",
+        "price": 29,
+        "category": "Beauty",
+        "ratings": 4.8,
+        "createdAt": "2025-06-30T15:12:40Z"
+      },
+      {
+        "productName": "Perfume",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Discover your signature scent",
+        "price": 59,
+        "category": "Beauty",
+        "ratings": 4.6,
+        "createdAt": "2025-07-12T12:36:03Z"
+      },
+      {
+        "productName": "Hair Care Products",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Maintain healthy and beautiful hair",
+        "price": 39,
+        "category": "Beauty",
+        "ratings": 4.2,
+        "createdAt": "2025-08-14T09:50:16Z"
+      },
+      {
+        "productName": "Skincare Products",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Achieve radiant and glowing skin",
+        "price": 49,
+        "category": "Beauty",
+        "ratings": 4.5,
+        "createdAt": "2025-09-16T16:04:29Z"
+      },
+      {
+        "productName": "Baby Products",
+      "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
+        "description": "Essential items for newborns and infants",
+        "price": 99,
+        "category": "Baby",
+        "ratings": 4.8,
+        "createdAt": "2025-10-18T13:18:42Z"
+      }
+  ]
