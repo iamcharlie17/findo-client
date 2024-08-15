@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../../../components/productCard/ProductCard";
 import { Pagination } from "@mui/material";
-import Sort from "../../../components/sort/Sort";
-import Search from "../../../components/search/Search";
+// import Sort from "../../../components/sort/Sort";
+// import Search from "../../../components/search/Search";
 import axios from "axios";
 import { FaSearch } from "react-icons/fa";
 
@@ -29,7 +29,12 @@ const Products = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/products?search=${search}`)
+      .get(`http://localhost:3000/products`, {
+        params: {
+            search : search,
+            sort: selectedOption,
+        }
+      })
       .then((res) => setProducts(res.data));
   }, [control]);
 
@@ -50,7 +55,6 @@ const Products = () => {
     setControl(!control);
   };
 
-  console.log(selectedOption);
 
   return (
     <div className="min-h-screen ">
