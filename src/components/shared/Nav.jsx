@@ -1,14 +1,18 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Nav = () => {
+  const { user, loading, logout } = useContext(AuthContext);
+
   const links = (
     <>
-      <NavLink to={'/'}>
+      <NavLink to={"/"}>
         <li>
           <a>Home</a>
         </li>
       </NavLink>
-      <NavLink to={'/products'}>
+      <NavLink to={"/products"}>
         <li>
           <a>Products</a>
         </li>
@@ -48,7 +52,34 @@ const Nav = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <Link to={"/login"} className="py-2 px-4 bg-[#99A2C4] text-white font-semibold rounded-md">Login</Link>
+        {user ? (
+          <div className="flex md:gap-8 gap-2 mx-2">
+            <Link to={"/my-cart"}>My Cart</Link>
+            <div className="dropdown dropdown-end">
+              <div tabIndex={0} role="button" className="">
+                My Account
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+              >
+                <li>
+                  <a>{user?.displayName}</a>
+                </li>
+                <li>
+                  <button onClick={()=> logout()}>Logout</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        ) : (
+          <Link
+            to={"/login"}
+            className="py-2 px-4 bg-[#99A2C4] text-white font-semibold rounded-md"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
