@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 
 const brands = [
@@ -30,27 +30,15 @@ const categories = [
   "Baby",
 ];
 
-const FilterDrawer = () => {
-  const [selectedBrands, setSelectedBrands] = useState({});
-  const [selectedCategories, setSelectedCategories] = useState({});
-  const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(0);
+const FilterDrawer = ({
+  selectedBrands,
+  selectedCategories,
+  handleBrandChange,
+  handleCategoryChange,
+  setMinPrice,
+  setMaxPrice,
+}) => {
 
-  const handleBrandChange = (brand) => {
-    setSelectedBrands((prevBrands) => ({
-      ...prevBrands,
-      [brand]: event.target.checked,
-    }));
-  };
-
-  const handleCategoryChage = (category) => {
-    setSelectedCategories((prevCategories) => ({
-      ...prevCategories,
-      [category]: event.target.checked,
-    }));
-  };
-
-  console.log(minPrice, maxPrice)
   return (
     <div className="drawer drawer-end">
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
@@ -125,7 +113,7 @@ const FilterDrawer = () => {
                         control={
                           <Checkbox
                             checked={selectedCategories[c] || false}
-                            onChange={() => handleCategoryChage(c)}
+                            onChange={() => handleCategoryChange(c)}
                           />
                         }
                         label={c}
