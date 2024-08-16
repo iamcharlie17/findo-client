@@ -360,43 +360,4 @@
         "brand": "L'Oréal"
       },
       {
-        "productName": "Perfume",
-        "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
-        "description": "Discover your signature scent",
-        "price": 59,
-        "category": "Beauty",
-        "ratings": 4.6,
-        "createdAt": "2025-07-12T12:36:03Z",
-        "brand": "Coca-Cola"
-      },
-      {
-        "productName": "Hair Care Products",
-        "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
-        "description": "Maintain healthy and beautiful hair",
-        "price": 39,
-        "category": "Beauty",
-        "ratings": 4.2,
-        "createdAt": "2025-08-14T09:50:16Z",
-        "brand": "Levi's"
-      },
-      {
-        "productName": "Skincare Products",
-        "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
-        "description": "Achieve radiant and glowing skin",
-        "price": 49,
-        "category": "Beauty",
-        "ratings": 4.5,
-        "createdAt": "2025-09-16T16:04:29Z",
-        "brand": "Sony"
-      },
-      {
-        "productName": "Baby Products",
-        "productImage": "https://i.ibb.co/kc1nVHb/product-image.jpg",
-        "description": "Essential items for newborns and infants",
-        "price": 99,
-        "category": "Baby",
-        "ratings": 4.8,
-        "createdAt": "2025-10-18T13:18:42Z",
-        "brand": "Toyota"
-      }
-  ]
+ 

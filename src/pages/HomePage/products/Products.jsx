@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../../../components/productCard/ProductCard";
-import { Pagination } from "@mui/material";
 // import Sort from "../../../components/sort/Sort";
 // import Search from "../../../components/search/Search";
 import axios from "axios";
 import { FaSearch } from "react-icons/fa";
-
+import { Pagination, Stack, Typography } from "@mui/material";
 
 const options = [
-    { value: "default", label: "Default" },
-    { value: "priceDsc", label: "Price high to low" },
-    { value: "priceAsc", label: "Price low to high" },
-    { value: "newest", label: "Newest" },
-  ];
+  { value: "default", label: "Default" },
+  { value: "priceDsc", label: "Price high to low" },
+  { value: "priceAsc", label: "Price low to high" },
+  { value: "newest", label: "Newest" },
+];
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -21,50 +20,60 @@ const Products = () => {
   const [maxPrice, setMaxPrice] = useState(0);
   const [brandName, setBrandName] = useState("");
   const [search, setSearch] = useState("");
-  const [page, setPage] = useState(1);
-  const itemPerPage = 12;
   const [control, setControl] = useState(false);
   const [selectedOption, setSelectedOption] = useState(options[0].value);
-
+  const [page, setPage] = useState(1);
+  const [count, setCount] = useState(1);
 
   useEffect(() => {
     axios
       .get(`http://localhost:3000/products`, {
         params: {
-            search : search,
-            sort: selectedOption,
-        }
+          search: search,
+          sort: selectedOption,
+          page: page,
+          size: 12
+        },
       })
       .then((res) => setProducts(res.data));
   }, [control]);
 
-  const count = products?.length;
-  const numberOfPages = Math.ceil(count / itemPerPage);
-  const handleChange = (event, value) => {
-    setPage(value);
-  };
+  useEffect(()=>{
+    axios.get('http://localhost:3000/count-products')
+    .then(res => setCount(res.data.length));
+  },[])
 
-  const handleSubmit = (e) => {
+  const numberOfPages = Math.ceil(count/ 12);
+  
+
+  const handleSearch = (e) => {
     e.preventDefault();
     const searchInfo = e.target.search.value;
     setSearch(searchInfo);
     setControl(!control);
   };
+
   const handleSort = (event) => {
     setSelectedOption(event.target.value);
     setControl(!control);
   };
 
+  const handleChange = (event, value) => {
+    setPage(value);
+    setControl(!control);
+  };
+
+//   products.map((p) => console.log(p.brand));
 
   return (
     <div className="min-h-screen ">
       <div className="md:grid grid-cols-5">
         <div className="my-8 ">
-          <div className="space-y-8">
+          <div className="md:space-y-8 flex md:block justify-around items-center">
             {/* <Search setSearch={setSearch} setControl={setControl}/> */}
             <div>
               <form
-                onSubmit={handleSubmit}
+                onSubmit={handleSearch}
                 className="flex justify-between gap-2 relative"
               >
                 <input
@@ -98,6 +107,8 @@ const Products = () => {
                 </select>
               </div>
             </div>
+            <hr />
+            <div>filter here..</div>
           </div>
         </div>
         <div className="col-span-4">
@@ -108,11 +119,12 @@ const Products = () => {
               </div>
             ))}
           </div>
-          <Pagination
-            page={page}
-            numberOfPages={numberOfPages}
-            handleChange={handleChange}
-          />
+          {/* pagination here */}
+          <div>
+            <Stack spacing={2}>
+              <Pagination count={numberOfPages} page={page} onChange={handleChange} />
+            </Stack>
+          </div>
         </div>
       </div>
     </div>
