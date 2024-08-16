@@ -37,6 +37,8 @@ const Filter = ({
   handleCategoryChange,
   setMinPrice,
   setMaxPrice,
+  control,
+  setControl
 }) => {
   return (
     <div className="space-y-4 hidden md:flex flex-col">
@@ -47,7 +49,10 @@ const Filter = ({
         <form>
           <input
             type="number"
-            onChange={(e) => setMinPrice(e.target.value)}
+            onChange={(e) => {
+              setMinPrice(e.target.value)
+              setControl(!control)
+            }}
             className="w-full bg-gray-200 rounded-md text-center py-1"
             name="minPrice"
             id=""
@@ -55,7 +60,10 @@ const Filter = ({
         </form>
         <form>
           <input
-            onChange={(e) => setMaxPrice(e.target.value)}
+            onChange={(e) => {
+              setMaxPrice(e.target.value)
+              setControl(!control)
+            }}
             type="number"
             className="w-full bg-gray-200 rounded-md text-center py-1"
             name="maxPrice"

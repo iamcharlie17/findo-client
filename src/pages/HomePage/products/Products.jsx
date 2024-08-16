@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../../../components/productCard/ProductCard";
 import axios from "axios";
-import FilterDrawer from "../../../components/filterDrawer/FilterDrawer";
-import Filter from "../../../components/filterDrawer/Filter";
 import Sort from "../../../components/sort/Sort";
 import Search from "../../../components/search/Search";
 import PaginationComponent from "../../../components/PaginationComponent/PaginationComponent";
+import Filter from "../../../components/filterDrawer/Filter";
+import FilterDrawer from "../../../components/filterDrawer/FilterDrawer";
 
 const options = [
   { value: "default", label: "Default" },
@@ -26,6 +26,26 @@ const Products = () => {
   const [page, setPage] = useState(1);
   const [count, setCount] = useState(1);
 
+  const filter = {
+    ...(selectedBrands && {
+      brands: {
+        $in: Object.keys(selectedBrands).filter(
+          (brand) => selectedBrands[brand]
+        ),
+      },
+    }),
+    ...(selectedCategories && {
+      categories: {
+        $in: Object.keys(selectedCategories).filter(
+          (category) => selectedCategories[category]
+        ),
+      },
+    }),
+    ...(minPrice > 0 && { price: { $gte: minPrice } }),
+    ...(maxPrice > 0 && { price: { $lte: maxPrice } }),
+  };
+
+
   useEffect(() => {
     axios
       .get(`http://localhost:3000/products`, {
@@ -34,6 +54,11 @@ const Products = () => {
           sort: selectedOption,
           page: page,
           size: 12,
+          filter: JSON.stringify(filter),
+          brands: filter.brands.$in,
+          categories: filter.categories.$in,
+          minPrice: minPrice,
+          maxPrice: maxPrice
         },
       })
       .then((res) => setProducts(res.data));
@@ -69,6 +94,7 @@ const Products = () => {
       ...prevBrands,
       [brand]: event.target.checked,
     }));
+    setControl(!control);
   };
 
   const handleCategoryChage = (category) => {
@@ -76,9 +102,11 @@ const Products = () => {
       ...prevCategories,
       [category]: event.target.checked,
     }));
+    setControl(!control);
   };
 
-  console.log(minPrice, maxPrice, selectedBrands, selectedCategories);
+  //   console.log(minPrice, maxPrice, selectedBrands, selectedCategories);
+//   products.map(p => console.log(p.brand));
 
   return (
     <div className="min-h-screen ">
@@ -98,6 +126,8 @@ const Products = () => {
                   handleCategoryChange={handleCategoryChage}
                   setMinPrice={setMinPrice}
                   setMaxPrice={setMaxPrice}
+                  setControl={setControl}
+                  control={control}
                 />
               </div>
             </div>
@@ -108,6 +138,8 @@ const Products = () => {
               handleCategoryChange={handleCategoryChage}
               setMinPrice={setMinPrice}
               setMaxPrice={setMaxPrice}
+              setControl={setControl}
+              control={control}
             />
           </div>
         </div>
@@ -119,7 +151,7 @@ const Products = () => {
               </div>
             ))}
           </div>
-          {/* pagination here */}
+
           <PaginationComponent
             numberOfPages={numberOfPages}
             page={page}
