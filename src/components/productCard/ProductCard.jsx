@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
         />
       </div>
       <div className="text-center space-y-1 mt-4">
-        <h1 className="text-xs md:text-xl">{product.productName}</h1>
+        <h1 className="text-xs md:text-sm lg:text-xl">{product.productName}</h1>
         <h2><span className="font-bold">{product.price}</span> BDT</h2>
         <div className="flex justify-center">
           <div className="flex gap-1">
