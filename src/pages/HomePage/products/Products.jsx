@@ -25,6 +25,7 @@ const Products = () => {
   const [selectedOption, setSelectedOption] = useState(options[0].value);
   const [page, setPage] = useState(1);
   const [count, setCount] = useState(1);
+  const [loading, setLoading] = useState(false);
 
   const filter = {
     ...(selectedBrands && {
@@ -45,8 +46,8 @@ const Products = () => {
     ...(maxPrice > 0 && { price: { $lte: maxPrice } }),
   };
 
-
   useEffect(() => {
+    setLoading(true);
     axios
       .get(`http://localhost:3000/products`, {
         params: {
@@ -58,10 +59,13 @@ const Products = () => {
           brands: filter.brands.$in,
           categories: filter.categories.$in,
           minPrice: minPrice,
-          maxPrice: maxPrice
+          maxPrice: maxPrice,
         },
       })
-      .then((res) => setProducts(res.data));
+      .then((res) => {
+        setProducts(res.data);
+        setLoading(false);
+      });
   }, [control]);
 
   useEffect(() => {
@@ -105,9 +109,6 @@ const Products = () => {
     setControl(!control);
   };
 
-  //   console.log(minPrice, maxPrice, selectedBrands, selectedCategories);
-//   products.map(p => console.log(p.brand));
-
   return (
     <div className="min-h-screen ">
       <div className="md:grid md:grid-cols-4 lg:grid-cols-5">
@@ -144,13 +145,19 @@ const Products = () => {
           </div>
         </div>
         <div className=" md:col-span-3 lg:col-span-4">
-          <div className="mx-8 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 ">
-            {products.map((p, idx) => (
-              <div key={idx}>
-                <ProductCard product={p} />
-              </div>
-            ))}
-          </div>
+          {loading ? (
+            <div className="flex justify-center items-center min-h-screen">
+                <h1>Loading...</h1>
+            </div>
+          ) : (
+            <div className="mx-8 grid grid-cols-2 min-h-screen lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 ">
+              {products.map((p, idx) => (
+                <div key={idx}>
+                  <ProductCard product={p} />
+                </div>
+              ))}
+            </div>
+          )}
 
           <PaginationComponent
             numberOfPages={numberOfPages}

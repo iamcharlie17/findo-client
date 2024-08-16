@@ -37,6 +37,8 @@ const FilterDrawer = ({
   handleCategoryChange,
   setMinPrice,
   setMaxPrice,
+  setControl,
+  control
 }) => {
 
   return (
@@ -63,7 +65,10 @@ const FilterDrawer = ({
               <form>
                 <input
                   type="number"
-                  onChange={(e) => setMinPrice(e.target.value)}
+                  onChange={(e) => {
+                    setMinPrice(e.target.value)
+                    setControl(!control)
+                  }}
                   className="w-full bg-gray-200 rounded-md text-center py-1"
                   name="minPrice"
                   id=""
@@ -71,7 +76,10 @@ const FilterDrawer = ({
               </form>
               <form>
                 <input
-                  onChange={(e) => setMaxPrice(e.target.value)}
+                  onChange={(e) => {
+                    setMaxPrice(e.target.value)
+                    setControl(!control);
+                  }}
                   type="number"
                   className="w-full bg-gray-200 rounded-md text-center py-1"
                   name="maxPrice"
