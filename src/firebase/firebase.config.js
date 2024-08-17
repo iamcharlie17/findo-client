@@ -1,3 +1,4 @@
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {getAuth} from "firebase/auth";
@@ -6,12 +7,12 @@ import {getAuth} from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBgVFk_2ek7p2FLBolZqw1COFbbExjRn1Y",
-  authDomain: "findo-client.firebaseapp.com",
-  projectId: "findo-client",
-  storageBucket: "findo-client.appspot.com",
-  messagingSenderId: "807421446020",
-  appId: "1:807421446020:web:a9a723670fb313bb53bfd1"
+  apiKey: "AIzaSyBKHBdcj4mIFZjXsyoSWohpGfQhsZ2lAOU",
+  authDomain: "findo-client-ca633.firebaseapp.com",
+  projectId: "findo-client-ca633",
+  storageBucket: "findo-client-ca633.appspot.com",
+  messagingSenderId: "454775464682",
+  appId: "1:454775464682:web:713f66868d1ad403f7ed93"
 };
 
 // Initialize Firebase

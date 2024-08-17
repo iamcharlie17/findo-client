@@ -49,7 +49,7 @@ const Products = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:3000/products`, {
+      .get(`https://findo-server.vercel.app/products`, {
         params: {
           search: search,
           sort: selectedOption,
@@ -70,7 +70,7 @@ const Products = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/count-products")
+      .get("https://findo-server.vercel.app/count-products")
       .then((res) => setCount(res.data.length));
   }, []);
 
